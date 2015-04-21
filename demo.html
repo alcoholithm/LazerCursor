@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>demo</title>
+		<meta name="description" content="">
+		<meta name="author" content="Lazynius">
+
+		<!-- LazerCursor CSS-->
+		<link href="style.css" rel='stylesheet'/>
+	</head>
+
+	<body>
+		<div id="lazer" class='container'>
+			<div class="red flame"></div>
+			<div class="orange flame"></div>
+			<div class="yellow flame"></div>
+			<div class="white flame"></div>
+		</div>
+	</body>
+
+	<!-- JQuery CDN-->
+	<script src='http://code.jquery.com/jquery.min.js'></script>
+	<!-- LazerCursor JS-->
+	<script type="text/javascript" src='lazer.js'></script>
+	<script type="text/javascript">
+		$(function() {
+
+			var lz = new LazerCursor();
+
+			lz.init({
+				backgroundColor : 'black'
+			});
+
+			$(document).mousemove(function(e){
+				lz.moveCursor(e);
+			});
+		});
+	</script>
+</html>
+
